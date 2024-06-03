@@ -22,7 +22,7 @@ plugins:
 
 # Site settings
 url: 'https://param-raval.github.io/ecap-segmentation.github.io/'
-baseurl: ''
+# baseurl: ''
 title: 'eCAP Segmentation'
 description: 'Blogpost on eCAP Segmentation and annotation tool'
 permalink: pretty
