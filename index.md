@@ -66,8 +66,13 @@ appears without conduction delay unlike other eCAPs. Across subjects, however, a
 of fibres differ in temporal location of activation as well as the intensity and shapes of the
 activation spikes.
 
-__Fig. 1. Illustration of the three cuff electrode interface placed on the vagus nerve. Sourced
-from BIOS Health.__
+
+![image](https://github.com/Param-Raval/ecap-annotation.github.io/blob/feature/add-content/assests/img/cuff.png)
+__Fig. 1. Illustration of the three cuff electrode interface placed on the vagus nerve. Sourced from BIOS Health.__
+
+
+![image](https://github.com/Param-Raval/ecap-annotation.github.io/blob/feature/add-content/assests/img/stacked1.png)
+__Fig. 2. Typical neural response after a stimulation (St, not shown) of pulse width 260μs and varying current.__
 
 
 # Background on eCAP Segmentation
@@ -78,14 +83,25 @@ Fibre types in peripheral nerves are classified into A, B and C types [18], with
 
 Usually in a VNS therapy, eCAPs are modelled manually to filter out specific fibre types to predict the physiological response. This is a tedious and error-prone process, and due to the absence of opportunities to optimise stimulation parameters, may not lead to the most effective therapeutic results. Moreover, with changing stimulation parameters such as current and pulse width, eCAP responses also change in their location of activation and shapes in the recordings. This becomes increasingly difficult to track manually. Automated eCAP segmentation involves partitioning the neural response obtained from neural recordings as a time-series into distinct segments, each corresponding to specific fiber types activated by the stimulus. In machine learning, this problem can be formulated as a time-series segmentation problem.
 
+__Figure 3__
 
 # Proposed Approach in eCAP Segmentation
 
 ### BiLSTMs+Attention
 
+![image](https://github.com/Param-Raval/ecap-annotation.github.io/blob/feature/add-content/assests/img/segnet2.0.png)
+__Fig. 4. Architecture of the BiLSTMs model with an attention layer to weigh the numerical
+features.__
+
 As shown in the Figure 4 above, two Bidirectional LSTM layers followed by two linear layers encode the neurogram sample into a hidden vector of size 32×1. The linear layers use the rectified linear unit (ReLU) activation function and have two 12 dropout layers of rate 0.5. Another fully connected layer also encodes the numerical features into a hidden feature vector of the same hidden size, 32. A multi headed self-attention[25] layer computes the attention weights using the concatenated feature vector. There are 8 attention heads used with a dropout rate of 0.1. Finally, a fully connected layer produces a prediction mask of the same size as the input.
 
 ### LSTM-ED
+
+![image](https://github.com/Param-Raval/ecap-annotation.github.io/blob/feature/add-content/assests/img/lstm_ae_model.png)
+__Fig. 5. An encoder-decoder architecture with an added attention layer to weigh the encoded
+representation with encoded numerical features. The encoder and decoder can be a series of
+BiLSTM layers (LSTM-ED) or convolutional layers (Conv-ED).__
+
 This model uses an encoder-decoder style architecture which is commonly used in image segmentation problems in computer vision. Image segmentation involves identifying and segmenting various objects in an image and producing an image mask where every pixel is assigned an object label. The LSTM-ED model, as in Figure 5, uses this concept in the time-series domain.  The encoder portion of LSTM-ED is similar to the BiLSTM+Attention model apart from the encoder directly being attached to the attention layer and the decoder attached immediately after the latter. 3 layers of BiLSTMs are present in both encoder and decoder components with a hidden size of 32. The attention layer contains 4 attention heads with a dropout rate of 0.5.
 
 
@@ -97,13 +113,37 @@ There are 4 convolutional layers in the encoder with 3x3 kernels and 16, 16, 32,
 
 # Results
 
+![image](https://github.com/Param-Raval/ecap-annotation.github.io/blob/feature/add-content/assests/img/baseline.png)
+__Fig. 6. Baseline F1 scores on the test sets__
+
 From the baseline results in Figure 6 it can be seen that the non-fibre label (“other”), being the majority class, is the easiest to predict even using a data agnostic method. The consistency of A-beta and A-gamma in their frequency and location of appearance gives them fairly decent scores when predicted blindly. A-delta and B fibres leave significant room for improvement. It is also worth noting that the interquartile range (IQR) is decently sized despite significant inter-subject variability. 
+
+![image](https://github.com/Param-Raval/ecap-annotation.github.io/blob/feature/add-content/assests/img/segnetresult.png)
+__Fig. 7. F1 scores from BiLSTM+Attention on the test sets__
+
 Compared to the baseline, the BiLSTM+Attention model does not perform sufficiently better (shown in Figure 7). While producing gains in A-delta and B fibres for some subjects, overall many others have taken a hit. Moreover, the IQR has widen in 3 of the 5 labels with four subjects being out of the range in A-beta and B. Overall, this model has not performed
 well enough.
 
+
+![image](https://github.com/Param-Raval/ecap-annotation.github.io/blob/feature/add-content/assests/img/convaeresult.png)
+__Fig. 8. F1 scores from the convolutional encoder-decoder on the test sets__
+
+
 Figure 8 shows the results for the Conv-ED model. While the improvements over the BiLSTM+Attention are modest in A-beta and A-gamma, there is a notable jump in performance in the B-fibre compared to the baseline. Three of the six subjects perform over 0.4 while two have over 0.6 in their F1-scores. In A-beta and A-gamma, the averages are still close to the baseline but the IQR has reduced slightly.
 
+
+![image](https://github.com/Param-Raval/ecap-annotation.github.io/blob/feature/add-content/assests/img/lstmaeresult.png)
+__Fig. 9. F1 scores from the LSTM encoder-decoder on the test sets.__
+
 Finally, Figure 9 reports the performance of the LSTM-ED model. The average performance for A-beta, A-gamma, and B fibres has improved over the baseline, with a notable advance in the B-fibre. Four subjects give a score of 0.4 and above in the B-fibre while the IQR in other fibres has narrowed further. 
+
+
+# Bootstrapping Analysis
+
+![image](https://github.com/Param-Raval/ecap-annotation.github.io/blob/feature/add-content/assests/img/btsp_abeta.png)
+![image](https://github.com/Param-Raval/ecap-annotation.github.io/blob/feature/add-content/assests/img/btsp_agamma.png)
+![image](https://github.com/Param-Raval/ecap-annotation.github.io/blob/feature/add-content/assests/img/btsp_b.png)
+__Fig. 11. Results from bootstrapping analysis of A-beta, A-gamma, and B-fibres.__
 
 # eCAP Annotation Tool
 
