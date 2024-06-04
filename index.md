@@ -17,6 +17,23 @@ therapies with minimal side-effects. This work proposes an approach to automatic
 segment eCAPs into activations of various fibre types. We report that of the four fibre types, two are reliably segmented by the two proposed models while some challenges are identified that limit improvement in the others. Finally, we propose a web-based annotation tool to visualise and annotate the segmented eCAPs to create a richer dataset that, with more data, will improve the performance of the models.
 
 
+- [Abstract](#abstract)
+- [Neural Data and Challenges](#neural-data-and-challenges)
+    - [Peripheral nervous system and vagus nerve stimulation](#peripheral-nervous-system-and-vagus-nerve-stimulation)
+    - [Dataset](#dataset)
+  - [Background on eCAP Segmentation](#background-on-ecap-segmentation)
+  - [Methods](#methods)
+    - [Baseline](#baseline)
+    - [Proposed Approaches in eCAP Segmentation](#proposed-approaches-in-ecap-segmentation)
+    - [BiLSTMs+Attention](#bilstmsattention)
+    - [LSTM-ED](#lstm-ed)
+    - [Conv-ED](#conv-ed)
+  - [Results](#results)
+  - [Bootstrapping Analysis](#bootstrapping-analysis)
+    - [Results from this analysis](#results-from-this-analysis)
+- [eCAP Annotation Tool](#ecap-annotation-tool)
+- [Retraining and Steps Towards Live Integration](#retraining-and-steps-towards-live-integration)
+
 # Neural Data and Challenges
 
 

@@ -165,6 +165,34 @@ to their physiological role in the body and thus can be modulated to develop per
 therapies with minimal side-effects. This work proposes an approach to automatically
 segment eCAPs into activations of various fibre types. We report that of the four fibre types, two are reliably segmented by the two proposed models while some challenges are identified that limit improvement in the others. Finally, we propose a web-based annotation tool to visualise and annotate the segmented eCAPs to create a richer dataset that, with more data, will improve the performance of the models.</p>
 
+<ul>
+  <li><a href="#abstract">Abstract</a></li>
+  <li><a href="#neural-data-and-challenges">Neural Data and Challenges</a>
+    <ul>
+      <li><a href="#peripheral-nervous-system-and-vagus-nerve-stimulation">Peripheral nervous system and vagus nerve stimulation</a></li>
+      <li><a href="#dataset">Dataset</a></li>
+      <li><a href="#background-on-ecap-segmentation">Background on eCAP Segmentation</a></li>
+      <li><a href="#methods">Methods</a>
+        <ul>
+          <li><a href="#baseline">Baseline</a></li>
+          <li><a href="#proposed-approaches-in-ecap-segmentation">Proposed Approaches in eCAP Segmentation</a></li>
+          <li><a href="#bilstmsattention">BiLSTMs+Attention</a></li>
+          <li><a href="#lstm-ed">LSTM-ED</a></li>
+          <li><a href="#conv-ed">Conv-ED</a></li>
+        </ul>
+      </li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#bootstrapping-analysis">Bootstrapping Analysis</a>
+        <ul>
+          <li><a href="#results-from-this-analysis">Results from this analysis</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#ecap-annotation-tool">eCAP Annotation Tool</a></li>
+  <li><a href="#retraining-and-steps-towards-live-integration">Retraining and Steps Towards Live Integration</a></li>
+</ul>
+
 <h1 id="neural-data-and-challenges">Neural Data and Challenges</h1>
 
 <h3 id="peripheral-nervous-system-and-vagus-nerve-stimulation">Peripheral nervous system and vagus nerve stimulation</h3>
