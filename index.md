@@ -72,6 +72,7 @@ __Fig. 1. Illustration of the three cuff electrode interface placed on the vagus
 <div style="display: flex; justify-content: center;">
 <img src="{{ '/assests/img/stacked1.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
 </div>
+
 __Fig. 2. Typical neural response after a stimulation (St, not shown) of pulse width 260μs and varying current.__
 
 
@@ -106,8 +107,7 @@ X-axis showing different fibre types and the Y-axis their F1-score for a given t
 
 <img src="{{ '/assests/img/segnet2.0.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
 
-__Fig. 4. Architecture of the BiLSTMs model with an attention layer to weigh the numerical
-features.__
+__Fig. 3. Architecture of the BiLSTMs model with an attention layer to weigh the numerical features.__
 
 - 2 Bidirectional LSTM layers
 - 2 linear layers to encode the neurogram into a vector of size 32×1. Linear layers use ReLU activation and two dropout layers of rate 0.5.
@@ -119,9 +119,7 @@ features.__
 
 <img src="{{ '/assests/img/lstm_ae_model.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
 
-__Fig. 5. An encoder-decoder architecture with an added attention layer to weigh the encoded
-representation with encoded numerical features. The encoder and decoder can be a series of
-BiLSTM layers (LSTM-ED) or convolutional layers (Conv-ED).__
+__Fig. 4. An encoder-decoder architecture with an added attention layer to weigh the encoded representation with encoded numerical features. The encoder and decoder can be a series of BiLSTM layers (LSTM-ED) or convolutional layers (Conv-ED).__
 
 The LSTM-ED model uses an encoder-decoder style architecture which is commonly used in image segmentation problems in computer vision.
 
@@ -146,34 +144,34 @@ Without the sequential and memory concepts of LSTM, the convolution layers learn
 <p style="text-align: center;">Fixed bounds baseline (test F1 score)</p>
 <img src="{{ '/assests/img/baseline.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
 
-__Fig. 6. Baseline F1 scores on the test sets__
+__Fig. 5. Baseline F1 scores on the test sets__
 
 <p style="text-align: center;">BiLSTM+Attention (test F1 score)</p>
 
 <img src="{{ '/assests/img/segnetresult.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
 
-__Fig. 7. F1 scores from BiLSTM+Attention on the test sets__
+__Fig. 6. F1 scores from BiLSTM+Attention on the test sets__
 
 <p style="text-align: center;">Conv-ED (test F1 score)</p>
 
 <img src="{{ '/assests/img/convaeresult.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
 
-__Fig. 8. F1 scores from the convolutional encoder-decoder on the test sets__
+__Fig. 7. F1 scores from the convolutional encoder-decoder on the test sets__
 
 <p style="text-align: center;">LSTM-ED (test F1 score)</p>
 
 <img src="{{ '/assests/img/lstmaeresult.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
 
-__Fig. 9. F1 scores from the LSTM encoder-decoder on the test sets.__
+__Fig. 8. F1 scores from the LSTM encoder-decoder on the test sets.__
 
 
-__Baseline__: Figure 6 shows that the consistency of A-beta and A-gamma in their frequency and location of appearance gives them fairly decent scores when predicted blindly. A-delta and B fibres leave significant room for improvement. It is also worth noting that the interquartile range (IQR) is decently sized despite significant inter-subject variability. The non-fibre label (“other”), being the majority class, is the easiest to predict even using a data agnostic method.
+__Baseline__: Figure 5 shows that the consistency of A-beta and A-gamma in their frequency and location of appearance gives them fairly decent scores when predicted blindly. A-delta and B fibres leave significant room for improvement. It is also worth noting that the interquartile range (IQR) is decently sized despite significant inter-subject variability. The non-fibre label (“other”), being the majority class, is the easiest to predict even using a data agnostic method.
 
-__BiLSTM+Attention__: Figure 7 shows that the model does not perform well enough. While producing gains in A-delta and B fibres for some subjects, overall many others have taken a hit. The IQR has also widen in 3 of the 5 labels with four subjects being out of the range in A-beta and B.
+__BiLSTM+Attention__: Figure 6 shows that the model does not perform well enough. While producing gains in A-delta and B fibres for some subjects, overall many others have taken a hit. The IQR has also widen in 3 of the 5 labels with four subjects being out of the range in A-beta and B.
 
-__Conv-ED__: Figure 8 shows while the improvements over BiLSTM+Attention are modest in A-beta and A-gamma, there is a notable jump in performance in the B-fibre compared to the baseline. Three of the six subjects perform over 0.4 while two have over 0.6 in their F1-scores. In A-beta and A-gamma, the averages are still close to the baseline but the IQR has reduced slightly.
+__Conv-ED__: Figure 7 shows while the improvements over BiLSTM+Attention are modest in A-beta and A-gamma, there is a notable jump in performance in the B-fibre compared to the baseline. Three of the six subjects perform over 0.4 while two have over 0.6 in their F1-scores. In A-beta and A-gamma, the averages are still close to the baseline but the IQR has reduced slightly.
 
-__LSTM-ED__: Figure 9 reports that the average performance for A-beta, A-gamma, and B fibres has improved over the baseline, with a notable advance in the B-fibre. Four subjects give a score of 0.4 and above in the B-fibre while the IQR in other fibres has narrowed further. 
+__LSTM-ED__: Figure 8 reports that the average performance for A-beta, A-gamma, and B fibres has improved over the baseline, with a notable advance in the B-fibre. Four subjects give a score of 0.4 and above in the B-fibre while the IQR in other fibres has narrowed further. 
 
 
 ## Bootstrapping Analysis
@@ -183,7 +181,7 @@ With the data challenges identified, acquisition of more and better data is requ
 
 <img src="{{ '/assests/img/bootstrapping.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
 
-__Fig. 10. Diagrammatic explanation of the bootstrapping process.__
+__Fig. 9. Diagrammatic explanation of the bootstrapping process.__
 
 * The aim was to validate that with greater number of subjects, better generalisation can be achieved.
 * The setup involved the following procedure: 
@@ -195,7 +193,7 @@ __Fig. 10. Diagrammatic explanation of the bootstrapping process.__
 
 ### Results from this analysis
 
-Figure 11 shows the results for A-beta, A-gamma, and B fibres from the bootstrapping
+Figure 10 shows the results for A-beta, A-gamma, and B fibres from the bootstrapping
 analysis. They can be summarised as follows:
 
 * Scores for A-beta and A-gamma show a clear upward trend as the number of training subjects increases. The IQR reduces greatly, signifying the increase in prediction confidence across test subjects. 
@@ -209,7 +207,7 @@ where despite more data the model is not able to get equivalent gains.
 <img src="{{ '/assests/img/btsp_abeta.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
 <img src="{{ '/assests/img/btsp_agamma.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
 <img src="{{ '/assests/img/btsp_b.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
-__Fig. 11. Results from bootstrapping analysis of A-beta, A-gamma, and B-fibres.__
+__Fig. 10. Results from bootstrapping analysis of A-beta, A-gamma, and B-fibres.__
 
 
 Existing studies have linked B-fibres to heart functionalities and targeting on improving
