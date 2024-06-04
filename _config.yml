@@ -21,21 +21,21 @@ plugins:
 - jekyll-remote-theme
 
 # Site settings
-url: 'https://param-raval.github.io/ecap-segmentation.github.io/'
-# baseurl: ''
+url: 'https://param-raval.github.io/'
+baseurl: 'ecap-segmentation.github.io/'
 title: 'eCAP Segmentation'
 description: 'Blogpost on eCAP Segmentation and annotation tool'
 permalink: pretty
-logo: "https://www.gravatar.com/avatar/6c0377abcf4da91cdd35dea4554b2a4c?s=52"
+# logo: "https://www.gravatar.com/avatar/6c0377abcf4da91cdd35dea4554b2a4c?s=52"
 
 # Pagination
 paginate: 5
 paginate_path: blog/page:num
 
 # Header nav
-navigation_header:
-- title: Home
-  url: /
+# navigation_header:
+# - title: Home
+#   url: /
 
 # Footer nav
 navigation_footer:
