@@ -1,7 +1,7 @@
 ---
 feature_text: |
   ## Automatic Fiber Type Segmentation in Exogenous Peripheral Neural Signal
-feature_image: "/assests/img/bios_bg.png"
+feature_image: "https://param-raval.github.io/ecap-segmentation.github.io/assests/img/bios_bg.png"
 ---
 
 # Abstract
