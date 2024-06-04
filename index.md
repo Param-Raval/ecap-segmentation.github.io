@@ -82,12 +82,12 @@ of fibres differ in temporal location of activation as well as the intensity and
 activation spikes.
 
 
-<img src="{{ '/assests/img/cuff.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
+<img src="{{ '/assests/img/cuff.png' | prepend: site.url}}" alt="image" />
 
 __Fig. 1. Illustration of the three cuff electrode interface placed on the vagus nerve. Sourced from BIOS Health.__
 
 <div style="display: flex; justify-content: center;">
-<img src="{{ '/assests/img/stacked1.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
+<img src="{{ '/assests/img/stacked1.png' | prepend: site.url}}" alt="image" />
 </div>
 
 __Fig. 2. Typical neural response after a stimulation (St, not shown) of pulse width 260μs and varying current.__
@@ -122,7 +122,7 @@ X-axis showing different fibre types and the Y-axis their F1-score for a given t
 
 ### BiLSTMs+Attention
 
-<img src="{{ '/assests/img/segnet2.0.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
+<img src="{{ '/assests/img/segnet2.0.png' | prepend: site.url}}" alt="image" />
 
 __Fig. 3. Architecture of the BiLSTMs model with an attention layer to weigh the numerical features.__
 
@@ -134,7 +134,7 @@ __Fig. 3. Architecture of the BiLSTMs model with an attention layer to weigh the
 
 ### LSTM-ED
 
-<img src="{{ '/assests/img/lstm_ae_model.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
+<img src="{{ '/assests/img/lstm_ae_model.png' | prepend: site.url}}" alt="image" />
 
 __Fig. 4. An encoder-decoder architecture with an added attention layer to weigh the encoded representation with encoded numerical features. The encoder and decoder can be a series of BiLSTM layers (LSTM-ED) or convolutional layers (Conv-ED).__
 
@@ -159,25 +159,25 @@ Without the sequential and memory concepts of LSTM, the convolution layers learn
 ## Results
 
 <p style="text-align: center;">Fixed bounds baseline (test F1 score)</p>
-<img src="{{ '/assests/img/baseline.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
+<img src="{{ '/assests/img/baseline.png' | prepend: site.url}}" alt="image" />
 
 __Fig. 5. Baseline F1 scores on the test sets__
 
 <p style="text-align: center;">BiLSTM+Attention (test F1 score)</p>
 
-<img src="{{ '/assests/img/segnetresult.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
+<img src="{{ '/assests/img/segnetresult.png' | prepend: site.url}}" alt="image" />
 
 __Fig. 6. F1 scores from BiLSTM+Attention on the test sets__
 
 <p style="text-align: center;">Conv-ED (test F1 score)</p>
 
-<img src="{{ '/assests/img/convaeresult.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
+<img src="{{ '/assests/img/convaeresult.png' | prepend: site.url}}" alt="image" />
 
 __Fig. 7. F1 scores from the convolutional encoder-decoder on the test sets__
 
 <p style="text-align: center;">LSTM-ED (test F1 score)</p>
 
-<img src="{{ '/assests/img/lstmaeresult.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
+<img src="{{ '/assests/img/lstmaeresult.png' | prepend: site.url}}" alt="image" />
 
 __Fig. 8. F1 scores from the LSTM encoder-decoder on the test sets.__
 
@@ -196,7 +196,7 @@ __LSTM-ED__: Figure 8 reports that the average performance for A-beta, A-gamma, 
 
 With the data challenges identified, acquisition of more and better data is required to drive this problem towards a solution. A bootstrapping analysis was conducted to confirm this intuition.
 
-<img src="{{ '/assests/img/bootstrapping.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
+<img src="{{ '/assests/img/bootstrapping.png' | prepend: site.url}}" alt="image" />
 
 __Fig. 9. Diagrammatic explanation of the bootstrapping process.__
 
@@ -221,9 +221,9 @@ is still visible.
 where despite more data the model is not able to get equivalent gains. 
 * This further validates the B-fibre challenges shared earlier where the higher variety B-fibre activations in a small sample space obstructs performance. 
 
-<img src="{{ '/assests/img/btsp_abeta.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
-<img src="{{ '/assests/img/btsp_agamma.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
-<img src="{{ '/assests/img/btsp_b.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
+<img src="{{ '/assests/img/btsp_abeta.png' | prepend: site.url}}" alt="image" />
+<img src="{{ '/assests/img/btsp_agamma.png' | prepend: site.url}}" alt="image" />
+<img src="{{ '/assests/img/btsp_b.png' | prepend: site.url}}" alt="image" />
 __Fig. 10. Results from bootstrapping analysis of A-beta, A-gamma, and B-fibres.__
 
 
