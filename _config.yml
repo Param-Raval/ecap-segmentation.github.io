@@ -21,8 +21,8 @@ plugins:
 - jekyll-remote-theme
 
 # Site settings
-url: 'https://param-raval.github.io/ecap-segmentation.github.io/'
-# baseurl: ''
+url: 'https://param-raval.github.io/'
+baseurl: 'ecap-segmentation.github.io/'
 title: 'eCAP Segmentation'
 description: 'Blogpost on eCAP Segmentation and annotation tool'
 permalink: pretty
