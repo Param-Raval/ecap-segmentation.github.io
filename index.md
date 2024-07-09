@@ -159,7 +159,7 @@ Table 2 notes the number of trainable parameters of each of these models.
 | LSTM-ED      | 38,949                    |
 | Conv-ED      | 63,333                    |
 
-__Table 2. Models and the number of parameters. Conv-ED is heavier given the multiple layers of convolutional layers in both encoder and decoder._
+_Table 2. Models and the number of parameters. Conv-ED is heavier given the multiple layers of convolutional layers in both encoder and decoder._
 
 ## Experiment Setting
 
@@ -271,9 +271,9 @@ is still visible.
 where despite more data the model is not able to get equivalent gains. 
 * This further validates the B-fibre challenges shared earlier where the higher variety B-fibre activations in a small sample space obstructs performance. 
 
-<img src="{{ '/assets/img/btsp_abeta.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
-<img src="{{ '/assets/img/btsp_agamma.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
-<img src="{{ '/assets/img/btsp_b.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
+<img src="{{ '/assets/img/btsp_abeta.png' | prepend: site.url}}" alt="image" />
+<img src="{{ '/assets/img/btsp_agamma.png' | prepend: site.url}}" alt="image" />
+<img src="{{ '/assets/img/btsp_b.png' | prepend: site.url}}" alt="image" />
 
 _Fig. 10. Results from bootstrapping analysis of A-beta, A-gamma, and B-fibres._
 
@@ -314,25 +314,25 @@ The proposed approaches demonstrate the effectiveness of machine learning models
 
 
 <p style="text-align: center;">Fixed bounds baseline (test F1 score)</p>
-<img src="{{ '/assets/img/baseline.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
+<img src="{{ '/assets/img/baseline.png' | prepend: site.url}}" alt="image" />
 
-_Fig. 12. Baseline F1 scores on the test sets__
+_Fig. 12. Baseline F1 scores on the test sets._
 
 <p style="text-align: center;">BiLSTM+Attention (test F1 score)</p>
 
-<img src="{{ '/assets/img/segnetresult.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
+<img src="{{ '/assets/img/segnetresult.png' | prepend: site.url}}" alt="image" />
 
-_Fig. 13. F1 scores from BiLSTM+Attention on the test sets__
+_Fig. 13. F1 scores from BiLSTM+Attention on the test sets._
 
 <p style="text-align: center;">Conv-ED (test F1 score)</p>
 
-<img src="{{ '/assets/img/convaeresult.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
+<img src="{{ '/assets/img/convaeresult.png' | prepend: site.url}}" alt="image" />
 
-_Fig. 14. F1 scores from the convolutional encoder-decoder on the test sets__
+_Fig. 14. F1 scores from the convolutional encoder-decoder on the test sets._
 
 <p style="text-align: center;">LSTM-ED (test F1 score)</p>
 
-<img src="{{ '/assets/img/lstmaeresult.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
+<img src="{{ '/assets/img/lstmaeresult.png' | prepend: site.url}}" alt="image" />
 
 _Fig.15. F1 scores from the LSTM encoder-decoder on the test sets._
 
