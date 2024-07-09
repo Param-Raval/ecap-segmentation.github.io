@@ -20,7 +20,7 @@
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="eCAP Segmentation" />
 <script type="application/ld+json">
-{"@type":"WebSite","url":"http://localhost:4000/","name":"eCAP Segmentation","headline":"eCAP Segmentation","description":"Blogpost on eCAP Segmentation and annotation tool","@context":"https://schema.org"}</script>
+{"@type":"WebSite","headline":"eCAP Segmentation","url":"http://localhost:4000/","name":"eCAP Segmentation","description":"Blogpost on eCAP Segmentation and annotation tool","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     
@@ -44,7 +44,7 @@
 
   </head>
 
-  <body class="layout-page">
+  <body class="layout-page  ">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="height: 0; position: absolute">
   <symbol id="codepen" viewBox="0 0 16 16"><path d="M15.988 5.443c-.004-.02-.007-.04-.012-.058l-.01-.033c-.006-.017-.012-.034-.02-.05-.003-.012-.01-.023-.014-.034l-.023-.045-.02-.032-.03-.04-.024-.03c-.01-.013-.022-.026-.034-.038l-.027-.027-.04-.032-.03-.024-.012-.01L8.38.117c-.23-.155-.53-.155-.76 0L.305 4.99.296 5c-.012.007-.022.015-.032.023-.014.01-.027.02-.04.032l-.027.027-.034.037-.024.03-.03.04c-.006.012-.013.022-.02.033l-.023.045-.015.034c-.007.016-.012.033-.018.05l-.01.032c-.005.02-.01.038-.012.058l-.006.03C.002 5.5 0 5.53 0 5.56v4.875c0 .03.002.06.006.09l.007.03c.003.02.006.04.013.058l.01.033c.006.018.01.035.018.05l.015.033c.006.016.014.03.023.047l.02.03c.008.016.018.03.03.042.007.01.014.02.023.03.01.012.02.025.034.036.01.01.018.02.028.026l.04.033.03.023.01.01 7.31 4.876c.116.078.248.117.382.116.134 0 .266-.04.38-.116l7.314-4.875.01-.01c.012-.007.022-.015.032-.023.014-.01.027-.02.04-.032l.027-.027.034-.037.024-.03.03-.04.02-.032.023-.046.015-.033.018-.052.01-.033c.005-.02.01-.038.013-.058 0-.01.003-.02.004-.03.004-.03.006-.06.006-.09V5.564c0-.03-.002-.06-.006-.09l-.007-.03zM8 9.626L5.568 8 8 6.374 10.432 8 8 9.626zM7.312 5.18l-2.98 1.993-2.406-1.61 5.386-3.59v3.206zM3.095 8l-1.72 1.15v-2.3L3.095 8zm1.237.828l2.98 1.993v3.208l-5.386-3.59 2.406-1.61zm4.355 1.993l2.98-1.993 2.407 1.61-5.387 3.59v-3.206zM12.905 8l1.72-1.15v2.3L12.905 8zm-1.237-.827L8.688 5.18V1.97l5.386 3.59-2.406 1.61z" fill-rule="nonzero"/></symbol>
   <symbol id="dribbble" viewBox="0 0 16 16"><path d="M8 16c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm6.747-6.905c-.234-.074-2.115-.635-4.257-.292.894 2.456 1.258 4.456 1.328 4.872 1.533-1.037 2.624-2.68 2.93-4.58zM10.67 14.3c-.102-.6-.5-2.688-1.46-5.18l-.044.014C5.312 10.477 3.93 13.15 3.806 13.4c1.158.905 2.614 1.444 4.194 1.444.947 0 1.85-.194 2.67-.543zm-7.747-1.72c.155-.266 2.03-3.37 5.555-4.51.09-.03.18-.056.27-.08-.173-.39-.36-.778-.555-1.16C4.78 7.85 1.47 7.807 1.17 7.8l-.003.208c0 1.755.665 3.358 1.756 4.57zM1.31 6.61c.307.005 3.122.017 6.318-.832-1.132-2.012-2.353-3.705-2.533-3.952-1.912.902-3.34 2.664-3.784 4.785zM6.4 1.368c.188.253 1.43 1.943 2.548 4 2.43-.91 3.46-2.293 3.582-2.468C11.323 1.827 9.736 1.176 8 1.176c-.55 0-1.087.066-1.6.19zm6.89 2.322c-.145.194-1.29 1.662-3.816 2.694.16.325.31.656.453.99.05.117.1.235.147.352 2.274-.286 4.533.172 4.758.22-.015-1.613-.59-3.094-1.543-4.257z"/></symbol>
@@ -166,7 +166,9 @@
 
     <h1 id="abstract">Abstract</h1>
 <p>Vagus nerve stimulation (VNS) is a promising innovation in the treatment of chronic conditions already treating a large population in epilepsy, depression, and obesity. In its current clinical applications, patients receive a static dose uptitrated individually during clinic visits. It has been suggested that patient-responsive closed-loop therapies would lead to better outcomes and this area has seen a lot of research recently. Development of a closed-loop neuromodulation system
-is challenging with the large amounts of data being transferred between the brain and the organs. Identifying different fibre types directly from nerve recordings is an important stepping stone towards closed-loop therapies. In the present work, we use machine learning to identify what fibres have been recruited in the vagus nerve following electrical stimulation. We propose novel ANN architectures trained on data from 6 subjects to this end. The results are encouraging but we conclude that more data is needed to lower the error rate. Subsequently, we propose an annotation tool to visualise and annotate the segmented responses to create a richer dataset.</p>
+is challenging with the large amounts of data being transferred between the brain and the organs. Identifying different fibre types directly from nerve recordings is an important stepping stone towards closed-loop therapies. In the present work, we use machine learning to identify what fibres have been recruited in the vagus nerve following electrical stimulation. We propose novel ANN architectures trained on data from 6 subjects. The results are encouraging but we conclude that more data is needed to lower the error rate. Subsequently, we propose an annotation tool to visualise and annotate the segmented responses to create a richer dataset.</p>
+
+<hr />
 
 <ul>
   <li><a href="#abstract">Abstract</a></li>
@@ -203,6 +205,8 @@ is challenging with the large amounts of data being transferred between the brai
   <li><a href="#appendix-a">Appendix A</a></li>
 </ul>
 
+<hr />
+
 <h1 id="neural-data-and-challenges">Neural Data and Challenges</h1>
 
 <h3 id="peripheral-nervous-system-and-vagus-nerve-stimulation">Peripheral nervous system and vagus nerve stimulation</h3>
@@ -214,6 +218,12 @@ the environment to the brain, as well as coordinating motor responses that gover
 and bodily functions.</p>
 
 <p>One of the key components of the PNS is the vagus nerve, the longest cranial nerve in the body, which extends from the brainstem to various organs in the chest and abdomen. The vagus nerve is a major player in the parasympathetic nervous system (PSNS), regulating essential bodily functions such as heart rate, digestion, and respiratory rate.</p>
+
+<p align="center">
+<img src="http://localhost:4000/assets/img/vns.png" alt="image" />
+</p>
+
+<p><em><span id="fig1">Fig. 1</span>. Illustration of a traditional setup for vagus nerve stimulation consisting of a stimulator that passes electric stimulation through the leads and cuffs to the attached vagus nerve.</em></p>
 
 <p>Vagus nerve stimulation (VNS) is a therapeutic technique that involves the delivery of electrical impulses to the vagus nerve. This process typically involves the surgical implantation of a small device, similar to a pacemaker, which is connected to the vagus nerve. The device generates controlled electrical pulses that travel along the vagus nerve, modulating its activity and influencing neural pathways involved in various physiological processes. By modulating the activity of the vagus nerve, VNS has been shown to influence neural pathways involved in mood regulation, seizure control, inflammation modulation, and autonomic function.</p>
 
@@ -270,23 +280,29 @@ neuropsychiatric and neurological conditions. For instance, VNS has been used as
   </tbody>
 </table>
 
+<p><em>Table 1: Erlanger-Gasser Classification of nerve fibres.</em></p>
+
 <p>Firing of different types of fibres is linked to different physiological responses including laryngeal muscle, breathing, and heart rate responses. It is therefore highly desirable to be able to identify the recruited fibres following VNS. For example, the relationships between (i) changes in heart rate and B-fibre activations, as well as (ii) laryngeal muscle contractions (common VNS side-effect) and A-fibre activations have been studied in the literature.</p>
 
 <p><strong>Modeling eCAPs</strong>: There are no known methods of automatically segmenting eCAPs following VNS and demonstrations in literature have relied on manual segmentation. This is a tedious process but more importantly the lack of automation precludes the use of segmented eCAPs in closed-loop therapy development (for example in optimising stimulation parameters for cardiac fibre recruitment). Moreover, with changing stimulation parameters such as current and pulse width, eCAP responses also change in their location of activation and shapes in the recordings. This becomes increasingly difficult to track manually.</p>
 
 <p>Automated eCAP segmentation involves partitioning the neural response obtained from neural recordings as a time-series into distinct segments, each corresponding to specific fibre types activated by the stimulus. The neurogram samples are 1-channel 1D signals. Thus, in machine learning, this problem can be formulated as a 1D time-series segmentation problem.</p>
 
-<p>Moreover, the stimulation experiment parameters have considerable effect on fibre activations. Across subjects it is seen that the B and A-delta fibres are activated more during higher current stimuli and activated earlier in stimuli with higher pulse widths. Additionally, the polarity of the stimulus and location of the cuff also affects the position of the activation. We design our
-models such that the features of current intensity (mA), stimulation pulse width (μs), and stimulation polarity (anodic/cathodic) can be fed in.</p>
+<p>Moreover, the stimulation experiment parameters have considerable effect on fibre activations. Across subjects it is seen that the B and A-delta fibres are activated more during higher current stimuli and activated earlier in stimuli with higher pulse widths. Additionally, the polarity of the stimulus and location of the cuff also affects the position of the activation. We design our models such that the features of current intensity (mA), stimulation pulse width (μs), and stimulation polarity (anodic/cathodic) can be fed in.</p>
 
 <h3 id="dataset">Dataset</h3>
-<p><strong>Neural interface</strong>: The vagus nerve is multi-fascicle in nature which poses a challenge to activate specific fibres and record their activation. The recorded intensity of a fibre activation varies around the nerve, therefore in this work we use proprietary, spatially-selective cuff electrodes that capture the responses from various positions on the nerve, see Figure 1. We collect neural responses to typical VNS waveforms: current (30-2500μA), frequency (1-20 Hz), pulse width (130-1000μs), and train duration (1-10s).</p>
+<p><strong>Neural interface</strong>: The vagus nerve is multi-fascicle in nature which poses a challenge to activate specific fibres and record their activation. The recorded intensity of a fibre activation varies around the nerve, therefore in this work we use proprietary, spatially-selective cuff electrodes that capture the responses from various positions on the nerve (see <a href="#fig2">Figure 2</a>). 
+We collect neural responses to typical VNS waveforms: current (30-2500μA), frequency (1-20 Hz), pulse width (130-1000μs), and train duration (1-10s).</p>
 
-<p>The responses were obtained from 6 porcine subjects. Typical neural responses to 17 different stimulation intensities are shown in Figure 2. Fibres of interest are labelled.</p>
+<p><img src="http://localhost:4000/assets/img/cuff.png" alt="image" id="fig2" /></p>
+
+<p><em>Fig. 2. Illustration of the three cuff electrode interface placed on the vagus nerve. Sourced from BIOS Health.</em></p>
+
+<p>The responses were obtained from 6 porcine subjects. Typical neural responses to 17 different stimulation intensities are shown in <a href="#fig3">Figure 3</a>. Fibres of interest are labelled.</p>
 
 <p>Every neurogram sample is a time-series of between 250 and 290 data points representing nerve activation in μV. To train sequential models, all samples were padded to 290 with trailing zeroes. The manually labelled bounds marking the start and end of different fibre activations were converted to a continuous label mask of the same length as the sample. Every data point corresponds to an integer label denoting the fibre type it belongs to. Points not belonging to one of the 4 fibre types of interest were encoded to a generic label “other”. The dataset contains 129,768 samples.</p>
 
-<p><strong>Manual labelling</strong>: The data used in the current experiments was labelled manually by experts who observe the trends of activation of various fibres using a stacked plot similar to Figure 2. The subplots are arranged in increasing order of stimulation current intensity. Prior knowledge about the distance from the stimulation site to the recording site, the order in which various fibres are recruited and noting the gradual intensification of the activation of certain fibres help the expert in identifying them.</p>
+<p><strong>Manual labelling</strong>: The data used in the current experiments was labelled manually by experts who observe the trends of activation of various fibres using a stacked plot similar to <a href="#fig3">Figure 3</a>. The subplots are arranged in increasing order of stimulation current intensity. Prior knowledge about the distance from the stimulation site to the recording site, the order in which various fibres are recruited and noting the gradual intensification of the activation of certain fibres help the expert in identifying them.</p>
 
 <p>For instance, activations for fibres A-beta and A-gamma appear early at lower stimulation
 currents than B-fibre. These are followed by a trailing laryngeal muscle artefact which
@@ -294,21 +310,19 @@ appears without conduction delay unlike other eCAPs. Across subjects, however, a
 of fibres differ in temporal location of activation as well as the intensity and shapes of the
 activation spikes.</p>
 
-<p><img src="http://localhost:4000/assets/img/cuff.png" alt="image" /></p>
-
-<p><strong>Fig. 1. Illustration of the three cuff electrode interface placed on the vagus nerve. Sourced from BIOS Health.</strong></p>
-
 <div style="display: flex; justify-content: center;">
-<img src="http://localhost:4000/assets/img/stacked1.png" alt="image" />
+<img src="http://localhost:4000/assets/img/stacked1.png" alt="image" id="fig3" />
 </div>
 
-<p><strong>Fig. 2. Typical neural response after a stimulation (St, not shown) of pulse width 260μs and varying current. Note how activations become more prominent with increasing current, and how fibres like B and A-delta are activated only at higher currents.</strong></p>
+<p><em>Fig. 3. Typical neural response after a stimulation (St, not shown) of pulse width 260μs and varying current. Note how activations become more prominent with increasing current, and how fibres like B and A-delta are activated only at higher currents.</em></p>
+
+<p><br /></p>
 
 <h2 id="methods">Methods</h2>
 
 <h3 id="baseline">Baseline</h3>
 
-<p>The simplest baseline averages the manually labelled start and end coordinates of the bounds for every fibre type across training subjects. All the test samples were assigned the same bounds for each fibre type and evaluated using F1-scores. This establishes a reasonable data-based baseline that achieves an average F1 score of x. However, as shown in Figure 5, we note that there is huge variability among subjects as well as different fibre types.</p>
+<p>The simplest baseline averages the manually labelled start and end coordinates of the bounds for every fibre type across training subjects. All the test samples were assigned the same bounds for each fibre type and evaluated using F1-scores. This establishes a reasonable data-based baseline that achieves an average F1 score of x. However, as shown in <a href="#fig5">Figure 5</a>, we note that there is huge variability among subjects as well as different fibre types.</p>
 
 <h3 id="proposed-approaches-in-ecap-segmentation">Proposed Approaches in eCAP Segmentation</h3>
 
@@ -318,21 +332,25 @@ activation spikes.</p>
 
 <p>Including multi–headed attention layers in these models allows them to focus on different parts of the input sequence simultaneously, enhancing its ability to capture relevant information.  This is particularly helpful in combining the additional numerical features.</p>
 
+<p><br /></p>
+
 <h3 id="bilstmsattention">BiLSTMs+Attention</h3>
 
-<p><img src="http://localhost:4000/assets/img/segnet2.0.png" alt="image" /></p>
+<p><img src="http://localhost:4000/assets/img/segnet2.0.png" alt="image" id="fig4" /></p>
 
-<p><strong>Fig. 3. Architecture of the BiLSTMs model with an attention layer to weigh the numerical features. In order, there are 2 BiLSTM layers, 2 linear layers (32x1) with ReLU and 0.5 dropout, 1 linear layer for numerical features, self-attention with 8 heads, 0.1 dropout, and an output linear layer to predict the mask.</strong></p>
+<p><em>Fig. 4. Architecture of the BiLSTMs model with an attention layer to weigh the numerical features. In order, there are 2 BiLSTM layers, 2 linear layers (32x1) with ReLU and 0.5 dropout, 1 linear layer for numerical features, self-attention with 8 heads, 0.1 dropout, and an output linear layer to predict the mask. “fc” represents fully-connected layers.</em></p>
 
 <p>Together, BiLSTM layers enable the model to capture bidirectional context of the order
 of occurrence of eCAPs, while attention mechanisms allow it to focus on relevant parts of
 the input sequence and identify the fibre types.</p>
 
+<p><br /></p>
+
 <h3 id="lstm-ed">LSTM-ED</h3>
 
-<p><img src="http://localhost:4000/assets/img/lstm_ae_model.png" alt="image" /></p>
+<p><img src="http://localhost:4000/assets/img/lstm_ae_model.png" alt="image" id="fig5" /></p>
 
-<p><strong>Fig. 4. An encoder-decoder architecture with an added attention layer (4 attention heads with a dropout rate of 0.1)  to weigh the encoded representation with encoded numerical features. The encoder and decoder can be a series of BiLSTM layers (3 layers of BiLSTMs with a hidden size of 32 in LSTM-ED) or convolutional layers (Conv-ED).</strong></p>
+<p><em>Fig. 5.  An encoder-decoder architecture with an added attention layer (4 attention heads with a dropout rate of 0.1)  to weigh the encoded representation with encoded numerical features. The encoder and decoder can be a series of BiLSTM layers (3 layers of BiLSTMs with a hidden size of 32 in LSTM-ED) or convolutional layers (Conv-ED). “fc” represents fully-connected layers.</em></p>
 
 <p>The LSTM-ED model uses an encoder-decoder style architecture which is commonly used in image segmentation problems in computer vision.</p>
 
@@ -340,20 +358,40 @@ the input sequence and identify the fibre types.</p>
 
 <p><strong>Decoder</strong>: The decoder attached immediately after the latter. This also has 3 layers of BiLSTMs with a hidden size of 32. The decoder is followed by a fully connected layer to produce the prediction mask. The decoder uses this learned representation of the eCAP data and transforms it to the corresponding output sequence of labels.</p>
 
+<p><br /></p>
+
 <h3 id="conv-ed">Conv-ED</h3>
 
-<p>Conv-ED follows the same architecture as shown in Figure 5 but with 1D convolutional layers in place of BiLSTM layers. In the encoder, there are 4 1D convolutional layers with 3x3 kernels each followed by a ReLU activation. In some layers, we also add dropout and 1D max pooling. The decoder has 4 transposed 1D convolutional layers with square kernels each followed by a ReLU and dropout except for the final convolutional layer which connects to a classification head.</p>
+<p>Conv-ED follows the same architecture as shown in <a href="#fig5">Figure 5</a> but with 1D convolutional layers in place of BiLSTM layers. In the encoder, there are 4 1D convolutional layers with 3x3 kernels each followed by a ReLU activation. In some layers, we also add dropout and 1D max pooling. The decoder has 4 transposed 1D convolutional layers with square kernels each followed by a ReLU and dropout except for the final convolutional layer which connects to a classification head.</p>
 
 <p>Without the sequential and memory concepts of LSTM, the convolution layers learn local interactions between neighbouring data points in a time series. Convolutional layers automatically learn hierarchical features from the input and can capture patterns at different levels of abstraction. Moreover, the translation invariance of convolutions makes the model immune to time delays across samples, meaning they can detect patterns regardless of their position in the input sequence.</p>
 
 <p>Table 2 notes the number of trainable parameters of each of these models.</p>
 
-<p>| Model        | # of trainable parameters |
-|————–|—————————|
-| BiLSTMs+Attn | 80,229                    |
-| LSTM-ED      | 38,949                    |
-| Conv-ED      | 63,333                    |
-<em>Table 2. Models and the number of parameters. Conv-ED is heavier given the multiple layers of convolutional layers in both encoder and decoder.</em></p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Model</th>
+      <th style="text-align: left"># of trainable parameters</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">BiLSTMs+Attn</td>
+      <td style="text-align: left">80,229</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">LSTM-ED</td>
+      <td style="text-align: left">38,949</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Conv-ED</td>
+      <td style="text-align: left">63,333</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Table 2. Models and the number of parameters. Conv-ED is heavier given the multiple layers of convolutional layers in both encoder and decoder.</em></p>
 
 <h2 id="experiment-setting">Experiment Setting</h2>
 
@@ -361,31 +399,107 @@ the input sequence and identify the fibre types.</p>
 
 <p><strong>Training split</strong>: Given the redundancy in a large proportion of samples within a subject, a random training, testing, and validation split is likely to cause samples similar to those “seen” in training to appear in testing. This does not simulate real-life settings where the model is expected to be utilised on a completely new subject. The splits were designed such that data from one subject remains wholly independent as a test set, one as validation, and the rest of the subjects form the training set.</p>
 
-<p><strong>Training setting</strong>: The models were trained with a batch size of 128, for 50 epochs without early stopping using cross entropy loss, the Adam optimizer, and a learning rate of 1e-4.</p>
+<p><strong>Training setting</strong>: The models were trained with a batch size of 128, for 40 epochs without early stopping using cross entropy loss, the Adam optimizer, and a learning rate of 1e-4.</p>
+
+<p><img src="http://localhost:4000/assets/img/val_f1.png" alt="image" id="fig6" /></p>
+
+<p><em>Fig. 6: Validation performance plateaus for the major fibre types around epoch 40 across subjects. Training beyond this either brings no change or reduces performance.</em></p>
+
+<p><br /></p>
 
 <h2 id="results">Results</h2>
 
-<p>Table 3 and Table 4 give two levels of summarised results with Appendix A giving more details per subject. Table 3 shows the weighted averages of the F1 scores and the average macro  F1 scores of all fibre types (except “other”) considered over six test subjects. Given the class imbalance issues found in the dataset, these scores give a good overview to rank the models. Table 4 shows the average of F1 scores of 4 fibre types. We omit the “other” fibre type in the computation of these scores because it is the majority class in all the samples and the models can easily score well on it. Moreover, it is irrelevant to the downstream task of detecting various fibre types and given the good performance of the models on this class (check Appendix A), it can be safely ignored.</p>
+<p><img src="http://localhost:4000/assets/img/good_example.png" alt="image" id="fig7" /></p>
+
+<p><em>Fig. 7: A typical “good” example of eCAP segmentation from the test set with A-beta, A-gamma, and B fibre activations correctly captured (top: predicted segments, bottom: ground truth).</em></p>
+
+<p><img src="http://localhost:4000/assets/img/bad_example.png" alt="image" id="fig8" /></p>
+
+<p><em>Fig. 8:  A typical “bad” example of eCAP segmentation from the test set. B fibre activations are missed along with A-delta and the A-beta prediction overlaps A-gamma activations (top: predicted segments, bottom: ground truth). Mistakes of these types are commonly found in the incorrect predictions.</em></p>
+
+<p>Table 3 and Table 4 give two levels of summarised results with <a href="#appendix-a">Appendix A</a> giving more details per subject. Table 3 shows the weighted averages of the F1 scores and the average macro  F1 scores of all fibre types (except “other”) considered over six test subjects. Given the class imbalance issues found in the dataset, these scores give a good overview to rank the models. Table 4 shows the average of F1 scores of 4 fibre types. We omit the “other” fibre type in the computation of these scores because it is the majority class in all the samples and the models can easily score well on it. Moreover, it is irrelevant to the downstream task of detecting various fibre types and given the good performance of the models on this class (check <a href="#appendix-a">Appendix A</a>), it can be safely ignored.</p>
 
 <p>From Table 4, we can see that A-beta and A-gamma are easier to predict relative to other fibres. This can be explained from their consistent activations, in position and shape, in the majority of samples. On the contrary, the lack of consistency in B-fibre activations across subjects, brings the average down considerably. The poor performance in A-delta and B fibres can be explained by their muted activations and lack of proper representation in the data (discussed further later).</p>
 
 <p>Overall, BiLSTM+Attn performs better than the rest and beats the baseline by a slim margin. Conv-ED fails to perform well whereas LSTM-ED does not give good enough improvement over the baseline.</p>
 
-<p>| Model           | Macro F1 score | Weighted Average F1 |
-|—————–|—————-|———————|
-| Baseline        | 0.37           | 0.40                |
-| <strong>BiLSTM+Attn</strong> | <strong>0.485</strong>      | <strong>0.498</strong>           |
-| LSTM-ED         | 0.405          | 0.485               |
-| Conv-ED         | 0.331          | 0.391               |
-<em>Table 3: Macro and Weighted Average Macro F1 scores per model</em></p>
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Macro F1 score</th>
+      <th>Weighted Average F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Baseline</td>
+      <td>0.37</td>
+      <td>0.40</td>
+    </tr>
+    <tr>
+      <td><strong>BiLSTM+Attn</strong></td>
+      <td><strong>0.485</strong></td>
+      <td><strong>0.498</strong></td>
+    </tr>
+    <tr>
+      <td>LSTM-ED</td>
+      <td>0.405</td>
+      <td>0.485</td>
+    </tr>
+    <tr>
+      <td>Conv-ED</td>
+      <td>0.331</td>
+      <td>0.391</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>| Model       | A-beta | A-gamma | B     | A-delta |
-|————-|——–|———|——-|———|
-| Baseline    | 0.58   | 0.53    | 0.36  | 0.03    |
-| BiLSTM+Attn | 0.635  | 0.590   | 0.442 | 0.123   |
-| LSTM-ED     | 0.601  | 0.541   | 0.433 | 0.032   |
-| Conv-ED     | 0.520  | 0.501   | 0.297 | 0.023   |
-<em>Table 4: Average F1 scores per model per fibre type</em></p>
+<p><em>Table 3: Macro and Weighted Average Macro F1 scores per model</em></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>A-beta</th>
+      <th>A-gamma</th>
+      <th>B</th>
+      <th>A-delta</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Baseline</td>
+      <td>0.58</td>
+      <td>0.53</td>
+      <td>0.36</td>
+      <td>0.03</td>
+    </tr>
+    <tr>
+      <td><strong>BiLSTM+Attn</strong></td>
+      <td><strong>0.635</strong></td>
+      <td><strong>0.590</strong></td>
+      <td><strong>0.442</strong></td>
+      <td><strong>0.123</strong></td>
+    </tr>
+    <tr>
+      <td>LSTM-ED</td>
+      <td>0.601</td>
+      <td>0.541</td>
+      <td>0.433</td>
+      <td>0.032</td>
+    </tr>
+    <tr>
+      <td>Conv-ED</td>
+      <td>0.520</td>
+      <td>0.501</td>
+      <td>0.297</td>
+      <td>0.023</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Table 4: Average F1 scores per model per fibre type</em></p>
 
 <h2 id="challenges-identified">Challenges Identified</h2>
 
@@ -437,35 +551,39 @@ the input sequence and identify the fibre types.</p>
       <td>16805</td>
       <td>0.130</td>
     </tr>
-    <tr>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
   </tbody>
 </table>
 
 <p><em>Table 5. A frequency distribution and statistics table highlighting the representation of different fibre types in the data. Point count and distribution show the number of data points that are labelled as the corresponding fibre type and their fraction relative to the rest of the points respectively. Similarly, sample count and distribution show the same statistics but on a sample level with 129,768 being the total number of samples in the dataset.</em></p>
 
-<p>Class imbalance: Table 5 shows various statistics about the frequency distribution of the classes in the dataset. It is evident from the point distribution column the diminished representation of fibre types of interest when compared to other fibres which take up the most space in the dataset. This explains the high performance of the latter class. However, A-gamma and A-beta have sufficient representation in the number of samples that contain them. This is not the case for A-delta which is the minority class on both fronts. Because of this the performance for A-delta is egregiously low in all the experiments.</p>
+<ul>
+  <li><strong>Class imbalance</strong>: Table 5 shows various statistics about the frequency distribution of the classes in the dataset. It is evident from the point distribution column the diminished representation of fibre types of interest when compared to other fibres which take up the most space in the dataset. This explains the high performance of the latter class. However, A-gamma and A-beta have sufficient representation in the number of samples that contain them. This is not the case for A-delta which is the minority class on both fronts. Because of this, the performance for A-delta is egregiously low in all the experiments.</li>
+</ul>
 
-<p>Inter-subject variability: As seen in Figures in Appendix A, the inter quartile range (IQR) for every fibre type is widened by large variations in performance among different test subjects. Certain subjects like <em>IT6-A5</em> and <em>IT7-A1</em> consistently perform poorly across fibres and models. Inspecting visually, the shapes of the eCAPs in <em>IT7-A1</em> are quite different from the rest of the subjects. In <em>IT6-A5</em>, the samples are visually similar except for a muted peak in A-beta and the absence of a valley-like shape towards the beginning which is present in other subjects (see Appendix A).</p>
+<p>This problem could not be resolved sufficiently well with weighted loss functions (like Focal loss or Dice loss), weighted resampling, data augmentation by rolling the time series, jittering, and linear modulation. Compared to our initial datasets (around 2,500 samples) where the samples contained pulses from only one recording channel (recording electrode) and the pulse trains were averaged, using entire pulse trains from all channels has boosted performance.</p>
 
-<p>Such ambiguous differences among subjects have been difficult to explain and hinder model generalisation.</p>
+<ul>
+  <li><strong>Inter-subject variability</strong>: As seen in Figures in <a href="#appendix-a">Appendix A</a>, the inter quartile range (IQR) for every fibre type is widened by large variations in performance among different test subjects. Certain subjects like <em>IT6-A5</em> and <em>IT7-A1</em> consistently perform poorly across fibres and models. Inspecting visually, the shapes of the eCAPs in <em>IT7-A1</em> are quite different from the rest of the subjects. In <em>IT6-A5</em>, the samples are visually similar except for a muted peak in A-beta and the absence of a valley-like shape towards the beginning which is present in other subjects (see <a href="#appendix-a">Appendix A</a>).</li>
+</ul>
 
-<p>Class representation: Table 5 shows how A-delta is the least prominent fibre within a sample and the number of samples that contain A-delta is just 13% of the entire set. In the presence of other prominent fibres, getting the model to get better at A-delta has been challenging.</p>
+<p>Such ambiguous differences among subjects have been difficult to explain and hinder model generalisation. Moreover, this also makes effective data augmentation challenging since the number of samples are large, uniformly varied representation of the classes is insufficient.</p>
+
+<ul>
+  <li><strong>Class representation</strong>: Table 5 shows how A-delta is the least prominent fibre within a sample and the number of samples that contain A-delta is just 13% of the entire set. In the presence of other prominent fibres, getting the model to get better at A-delta has been challenging.</li>
+</ul>
 
 <p>For B-fibre, despite having decent representation in the dataset, models fail to perform beyond a certain point. Subjects in both LSTM-ED and Conv-ED struggle to cross the 0.7 score while some remain around 0.1. Given the relatively mutated activations in B-fibre peaks, there are not sufficiently varied samples in quality and quantity in the dataset that the model can strongly fit to. Subjects in which B-fibre performs well have consistent and prominent activations that resemble other subjects. To replicate this in other subjects, a larger number of varied samples is necessary.</p>
+
+<p><br /></p>
 
 <h2 id="bootstrapping-analysis">Bootstrapping Analysis</h2>
 
 <p>With the data challenges identified, acquisition of more and better data is required to drive this problem towards a solution. A bootstrapping analysis was conducted to confirm this intuition.</p>
+<p align="center">
+  <img src="http://localhost:4000/assets/img/bootstrapping.png" alt="image" id="fig9" />
+</p>
 
-<p><img src="http://localhost:4000/assets/img/bootstrapping.png" alt="image" /></p>
-
-<p><strong>Fig. 9. Diagrammatic explanation of the bootstrapping process.</strong></p>
+<p><em>Fig. 9. Diagrammatic explanation of the bootstrapping process.</em></p>
 
 <ul>
   <li>The aim was to validate that with greater number of subjects, better generalisation can be achieved.</li>
@@ -482,23 +600,24 @@ the input sequence and identify the fibre types.</p>
 
 <h3 id="results-from-this-analysis">Results from this analysis</h3>
 
-<p>Figure 6 shows the results for A-beta, A-gamma, and B fibres from the bootstrapping
+<p><a href="#fig10">Figure 10</a> shows the results for A-beta, A-gamma, and B fibres from the bootstrapping
 analysis. They can be summarised as follows:</p>
 
 <ul>
-  <li>Scores for A-beta and A-gamma show a clear upward trend as the number of training subjects increases. The IQR reduces greatly, signifying the increase in prediction confidence across test subjects.</li>
-  <li>This shows that adding more varied subjects helps models to capture general trends better.</li>
-  <li>The last chart shows the results for the B-fibre where the upward trend of improvement
-is still visible.</li>
-  <li>More interesting is the performance stagnation in a few test subjects
-where despite more data the model is not able to get equivalent gains.</li>
+  <li>Scores for A-beta and A-gamma show a clear upward trend as the number of training subjects increases.</li>
+  <li>Similarly, the IQR reduces greatly signifying the increase in prediction confidence across test subjects. This also shows that adding more varied subjects helps models to capture general trends better.</li>
+  <li>The last chart shows the results for the B-fibre where the upward trend of improvement is still visible.</li>
+  <li>The performance stagnation in a few test subjects is interesting where despite more data the model is not able to get equivalent gains.</li>
   <li>This further validates the B-fibre challenges shared earlier where the higher variety B-fibre activations in a small sample space obstructs performance.</li>
 </ul>
 
-<p><img src="http://localhost:4000/assets/img/btsp_abeta.png" alt="image" />
+<p><img src="http://localhost:4000/assets/img/btsp_abeta.png" alt="image" id="fig10" />
 <img src="http://localhost:4000/assets/img/btsp_agamma.png" alt="image" />
-<img src="http://localhost:4000/assets/img/btsp_b.png" alt="image" />
-<strong>Fig. 6. Results from bootstrapping analysis of A-beta, A-gamma, and B-fibres.</strong></p>
+<img src="http://localhost:4000/assets/img/btsp_b.png" alt="image" /></p>
+
+<p><em>Fig. 10. Results from bootstrapping analysis of A-beta, A-gamma, and B-fibres.</em></p>
+
+<hr />
 
 <h1 id="ecap-annotation-tool">eCAP Annotation Tool</h1>
 <p>With the conclusion that more data is required to improve the performance of the models, a web-based annotation tool was developed to facilitate the process of labelling eCAPs. The tool allows users to visualise the segmented eCAPs along with the bounds predicted from the segmentation model and edit these bounds for every sample. The annotated data can then be used to retrain the models and improve their performance.</p>
@@ -521,11 +640,11 @@ where despite more data the model is not able to get equivalent gains.</li>
   <li>The tool can exist offline independently and integration with a pipeline to annotate samples during a live trial can use retraining to improve model predictions during the session.</li>
 </ul>
 
-<p>Figure 7 shows a brief demonstration of the tool showing how a user can create, edit, and delete individual fibre bounds for a sample.</p>
+<p>Figure 11 shows a brief demonstration of the tool showing how a user can create, edit, and delete individual fibre bounds for a sample.</p>
 
-<video src="http://localhost:4000/assets/vid/tool_demo.mp4" alt="video" />
+<p><img src="http://localhost:4000/assets/vid/tool_demo_small.gif" alt="gif" /></p>
 
-<p><em>Fig. 7. Demo of the annotation tool with the user editing, adding, and deleting bounds for a sample. Meta data for the sample is useful for the team to get better context of the sample while annotating.</em></p>
+<p><em>Fig. 11. Demo of the annotation tool with the user editing, adding, and deleting bounds for a sample. Meta data for the sample is useful for the team to get better context of the sample while annotating.</em></p>
 
 <h1 id="retraining-and-steps-towards-live-integration">Retraining and Steps Towards Live Integration</h1>
 
@@ -535,38 +654,40 @@ where despite more data the model is not able to get equivalent gains.</li>
 
 <p>The proposed approaches demonstrate the effectiveness of machine learning models towards modelling and segmenting eCAPs towards the goal of developing closed-loop neuromodulation therapies. With our results and analysis, we show how more trials and data collection efforts can improve the performance and enable deployed, practical use of this system. With the proposed annotation tool and retraining workflow, we provide a framework for this purpose.</p>
 
+<hr />
+
 <h1 id="appendix-a">Appendix A</h1>
 
 <p style="text-align: center;">Fixed bounds baseline (test F1 score)</p>
-<p><img src="http://localhost:4000/assets/img/baseline.png" alt="image" /></p>
+<p><img src="http://localhost:4000/assets/img/baseline.png" alt="image" id="fig12" /></p>
 
-<p><strong>Fig. 8. Baseline F1 scores on the test sets</strong></p>
+<p><em>Fig. 12. Baseline F1 scores on the test sets.</em></p>
 
 <p style="text-align: center;">BiLSTM+Attention (test F1 score)</p>
 
-<p><img src="http://localhost:4000/assets/img/segnetresult.png" alt="image" /></p>
+<p><img src="http://localhost:4000/assets/img/segnetresult.png" alt="image" id="fig13" /></p>
 
-<p><strong>Fig. 9. F1 scores from BiLSTM+Attention on the test sets</strong></p>
+<p><em>Fig. 13. F1 scores from BiLSTM+Attention on the test sets.</em></p>
 
 <p style="text-align: center;">Conv-ED (test F1 score)</p>
 
-<p><img src="http://localhost:4000/assets/img/convaeresult.png" alt="image" /></p>
+<p><img src="http://localhost:4000/assets/img/convaeresult.png" alt="image" id="fig14" /></p>
 
-<p><strong>Fig. 10. F1 scores from the convolutional encoder-decoder on the test sets</strong></p>
+<p><em>Fig. 14. F1 scores from the convolutional encoder-decoder on the test sets.</em></p>
 
 <p style="text-align: center;">LSTM-ED (test F1 score)</p>
 
-<p><img src="http://localhost:4000/assets/img/lstmaeresult.png" alt="image" /></p>
+<p><img src="http://localhost:4000/assets/img/lstmaeresult.png" alt="image" id="fig15" /></p>
 
-<p><strong>Fig. 11. F1 scores from the LSTM encoder-decoder on the test sets.</strong></p>
+<p><em>Fig.15. F1 scores from the LSTM encoder-decoder on the test sets.</em></p>
 
-<p><strong>Baseline</strong>: Figure 5 shows that the consistency of A-beta and A-gamma in their frequency and location of appearance gives them fairly decent scores when predicted blindly. A-delta and B fibres leave significant room for improvement. It is also worth noting that the interquartile range (IQR) is decently sized despite significant inter-subject variability. The non-fibre label (“other”), being the majority class, is the easiest to predict even using a data agnostic method.</p>
+<p><strong>Baseline</strong>: <a href="#fig12">Figure 12</a> shows that the consistency of A-beta and A-gamma in their frequency and location of appearance gives them fairly decent scores when predicted blindly. A-delta and B fibres leave significant room for improvement. It is also worth noting that the interquartile range (IQR) is decently sized despite significant inter-subject variability. The non-fibre label (“other”), being the majority class, is the easiest to predict even using a data agnostic method.</p>
 
-<p><strong>BiLSTM+Attention</strong>: Figure 6 shows that the model does not perform well enough. While producing gains in A-delta and B fibres for some subjects, overall many others have taken a hit. The IQR has also widen in 3 of the 5 labels with four subjects being out of the range in A-beta and B.</p>
+<p><strong>BiLSTM+Attention</strong>: <a href="#fig13">Figure 13</a> shows that the model does not perform well enough. While producing gains in A-delta and B fibres for some subjects, overall many others have taken a hit. The IQR has also widened in 3 of the 5 labels with four subjects being out of the range in A-beta and B.</p>
 
-<p><strong>Conv-ED</strong>: Figure 7 shows while the improvements over BiLSTM+Attention are modest in A-beta and A-gamma, there is a notable jump in performance in the B-fibre compared to the baseline. Three of the six subjects perform over 0.4 while two have over 0.6 in their F1-scores. In A-beta and A-gamma, the averages are still close to the baseline but the IQR has reduced slightly.</p>
+<p><strong>Conv-ED</strong>: <a href="#fig14">Figure 14</a> shows while the improvements over BiLSTM+Attention are modest in A-beta and A-gamma, there is a notable jump in performance in the B-fibre compared to the baseline. Three of the six subjects perform over 0.4 while two have over 0.6 in their F1-scores. In A-beta and A-gamma, the averages are still close to the baseline but the IQR has reduced slightly.</p>
 
-<p><strong>LSTM-ED</strong>: Figure 8 reports that the average performance for A-beta, A-gamma, and B fibres has improved over the baseline, with a notable advance in the B-fibre. Four subjects give a score of 0.4 and above in the B-fibre while the IQR in other fibres has narrowed further.</p>
+<p><strong>LSTM-ED</strong>: <a href="#fig15">Figure 15</a> reports that the average performance for A-beta, A-gamma, and B fibres has improved over the baseline, with a notable advance in the B-fibre. Four subjects give a score of 0.4 and above in the B-fibre while the IQR in other fibres has narrowed further.</p>
 
 
   </article>
