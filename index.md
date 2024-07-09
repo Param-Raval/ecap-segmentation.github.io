@@ -291,7 +291,7 @@ However, with the eCAP annotation tool,
 
 Figure 11 shows a brief demonstration of the tool showing how a user can create, edit, and delete individual fibre bounds for a sample.
 
-<video src="{{ '/assets/vid/tool_demo.mp4' | prepend: site.url}}" alt="video" />
+<img src="{{ '/assets/vid/tool_demo.gif' | prepend: site.url}}" alt="gif" />
 
 _Fig. 11. Demo of the annotation tool with the user editing, adding, and deleting bounds for a sample. Meta data for the sample is useful for the team to get better context of the sample while annotating._
 
