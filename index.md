@@ -69,7 +69,8 @@ __Different fibre types__: Fibre types in these nerves are classified based on t
 | A-delta                        | 1–5 μm     | 3–30 m/s            |
 | B                              | < 2 μm     | 3-14 m/s            |
 | C                              | 0.2-1.5 μm | 0.5–2.0 m/s         |
-__Table 1: Erlanger-Gasser Classification of nerve fibres._
+
+_Table 1: Erlanger-Gasser Classification of nerve fibres._
 
 Firing of different types of fibres is linked to different physiological responses including laryngeal muscle, breathing, and heart rate responses. It is therefore highly desirable to be able to identify the recruited fibres following VNS. For example, the relationships between (i) changes in heart rate and B-fibre activations, as well as (ii) laryngeal muscle contractions (common VNS side-effect) and A-fibre activations have been studied in the literature.
 
@@ -157,6 +158,7 @@ Table 2 notes the number of trainable parameters of each of these models.
 | BiLSTMs+Attn | 80,229                    |
 | LSTM-ED      | 38,949                    |
 | Conv-ED      | 63,333                    |
+
 __Table 2. Models and the number of parameters. Conv-ED is heavier given the multiple layers of convolutional layers in both encoder and decoder._
 
 ## Experiment Setting
@@ -195,7 +197,9 @@ Overall, BiLSTM+Attn performs better than the rest and beats the baseline by a s
 | **BiLSTM+Attn** | **0.485**      | **0.498**           |
 | LSTM-ED         | 0.405          | 0.485               |
 | Conv-ED         | 0.331          | 0.391               |
+
 _Table 3: Macro and Weighted Average Macro F1 scores per model_
+
 
 
 | Model       | A-beta | A-gamma | B     | A-delta |
@@ -204,6 +208,7 @@ _Table 3: Macro and Weighted Average Macro F1 scores per model_
 | BiLSTM+Attn | 0.635  | 0.590   | 0.442 | 0.123   |
 | LSTM-ED     | 0.601  | 0.541   | 0.433 | 0.032   |
 | Conv-ED     | 0.520  | 0.501   | 0.297 | 0.023   |
+
 _Table 4: Average F1 scores per model per fibre type_
 
 ## Challenges Identified
@@ -266,9 +271,10 @@ is still visible.
 where despite more data the model is not able to get equivalent gains. 
 * This further validates the B-fibre challenges shared earlier where the higher variety B-fibre activations in a small sample space obstructs performance. 
 
-<img src="{{ '/assests/img/btsp_abeta.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
-<img src="{{ '/assests/img/btsp_agamma.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
-<img src="{{ '/assests/img/btsp_b.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
+<img src="{{ '/assets/img/btsp_abeta.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
+<img src="{{ '/assets/img/btsp_agamma.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
+<img src="{{ '/assets/img/btsp_b.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
+
 _Fig. 10. Results from bootstrapping analysis of A-beta, A-gamma, and B-fibres._
 
 
@@ -308,25 +314,25 @@ The proposed approaches demonstrate the effectiveness of machine learning models
 
 
 <p style="text-align: center;">Fixed bounds baseline (test F1 score)</p>
-<img src="{{ '/assests/img/baseline.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
+<img src="{{ '/assets/img/baseline.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
 
 _Fig. 12. Baseline F1 scores on the test sets__
 
 <p style="text-align: center;">BiLSTM+Attention (test F1 score)</p>
 
-<img src="{{ '/assests/img/segnetresult.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
+<img src="{{ '/assets/img/segnetresult.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
 
 _Fig. 13. F1 scores from BiLSTM+Attention on the test sets__
 
 <p style="text-align: center;">Conv-ED (test F1 score)</p>
 
-<img src="{{ '/assests/img/convaeresult.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
+<img src="{{ '/assets/img/convaeresult.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
 
 _Fig. 14. F1 scores from the convolutional encoder-decoder on the test sets__
 
 <p style="text-align: center;">LSTM-ED (test F1 score)</p>
 
-<img src="{{ '/assests/img/lstmaeresult.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
+<img src="{{ '/assets/img/lstmaeresult.png' | prepend: site.baseurl | prepend: site.url}}" alt="image" />
 
 _Fig.15. F1 scores from the LSTM encoder-decoder on the test sets._
 
