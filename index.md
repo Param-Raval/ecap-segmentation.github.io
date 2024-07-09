@@ -191,6 +191,7 @@ From Table 4, we can see that A-beta and A-gamma are easier to predict relative 
 
 Overall, BiLSTM+Attn performs better than the rest and beats the baseline by a slim margin. Conv-ED fails to perform well whereas LSTM-ED does not give good enough improvement over the baseline.
 
+
 | Model           | Macro F1 score | Weighted Average F1 |
 |-----------------|----------------|---------------------|
 | Baseline        | 0.37           | 0.40                |
@@ -200,6 +201,43 @@ Overall, BiLSTM+Attn performs better than the rest and beats the baseline by a s
 
 _Table 3: Macro and Weighted Average Macro F1 scores per model_
 
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Macro F1 score</th>
+      <th>Weighted Average F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Baseline</td>
+      <td>0.37</td>
+      <td>0.40</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>BiLSTM+Attn</strong>
+      </td>
+      <td>
+        <strong>0.485</strong>
+      </td>
+      <td>
+        <strong>0.498</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>LSTM-ED</td>
+      <td>0.405</td>
+      <td>0.485</td>
+    </tr>
+    <tr>
+      <td>Conv-ED</td>
+      <td>0.331</td>
+      <td>0.391</td>
+    </tr>
+  </tbody>
+</table>
 
 
 | Model       | A-beta | A-gamma | B     | A-delta |
@@ -210,6 +248,48 @@ _Table 3: Macro and Weighted Average Macro F1 scores per model_
 | Conv-ED     | 0.520  | 0.501   | 0.297 | 0.023   |
 
 _Table 4: Average F1 scores per model per fibre type_
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Model</th>
+      <th scope="col">A-beta</th>
+      <th scope="col">A-gamma</th>
+      <th scope="col">B</th>
+      <th scope="col">A-delta</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Baseline</td>
+      <td>0.58</td>
+      <td>0.53</td>
+      <td>0.36</td>
+      <td>0.03</td>
+    </tr>
+    <tr>
+      <td>BiLSTM+Attn</td>
+      <td>0.635</td>
+      <td>0.590</td>
+      <td>0.442</td>
+      <td>0.123</td>
+    </tr>
+    <tr>
+      <td>LSTM-ED</td>
+      <td>0.601</td>
+      <td>0.541</td>
+      <td>0.433</td>
+      <td>0.032</td>
+    </tr>
+    <tr>
+      <td>Conv-ED</td>
+      <td>0.520</td>
+      <td>0.501</td>
+      <td>0.297</td>
+      <td>0.023</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Challenges Identified
 
@@ -226,6 +306,61 @@ Comparing the four methods reported here, the performance improvements after usi
 
 _Table 5. A frequency distribution and statistics table highlighting the representation of different fibre types in the data. Point count and distribution show the number of data points that are labelled as the corresponding fibre type and their fraction relative to the rest of the points respectively. Similarly, sample count and distribution show the same statistics but on a sample level with 129,768 being the total number of samples in the dataset._
 
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">class</th>
+      <th scope="col">point count</th>
+      <th scope="col">point dist</th>
+      <th scope="col">sample count</th>
+      <th scope="col">sample dist</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>other</td>
+      <td>29672849</td>
+      <td>0.788</td>
+      <td>129768</td>
+      <td>1.000</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>3761043</td>
+      <td>0.100</td>
+      <td>103415</td>
+      <td>0.797</td>
+    </tr>
+    <tr>
+      <td>A-gamma</td>
+      <td>2144551</td>
+      <td>0.057</td>
+      <td>118816</td>
+      <td>0.916</td>
+    </tr>
+    <tr>
+      <td>A-beta</td>
+      <td>1780301</td>
+      <td>0.047</td>
+      <td>129301</td>
+      <td>0.996</td>
+    </tr>
+    <tr>
+      <td>A-delta</td>
+      <td>273976</td>
+      <td>0.007</td>
+      <td>16805</td>
+      <td>0.130</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 
 - Class imbalance: Table 5 shows various statistics about the frequency distribution of the classes in the dataset. It is evident from the point distribution column the diminished representation of fibre types of interest when compared to other fibres which take up the most space in the dataset. This explains the high performance of the latter class. However, A-gamma and A-beta have sufficient representation in the number of samples that contain them. This is not the case for A-delta which is the minority class on both fronts. Because of this, the performance for A-delta is egregiously low in all the experiments.
 
