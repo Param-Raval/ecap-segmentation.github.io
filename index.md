@@ -121,7 +121,7 @@ _Fig. 3. Typical neural response after a stimulation (St, not shown) of pulse wi
 
 ### Baseline
 
-The simplest baseline averages the manually labelled start and end coordinates of the bounds for every fibre type across training subjects. All the test samples were assigned the same bounds for each fibre type and evaluated using F1-scores. This establishes a reasonable data-based baseline that achieves an average F1 score of x. However, as shown in [Figure 5](#fig5), we note that there is huge variability among subjects as well as different fibre types.
+The simplest baseline averages the manually labelled start and end coordinates of the bounds for every fibre type across training subjects. All the test samples were assigned the same bounds for each fibre type and evaluated using F1-scores. This establishes a reasonable data-based baseline that achieves an average macro F1 score of 0.37. However, as shown in [Figure 5](#fig5), we note that there is huge variability among subjects as well as different fibre types.
 
 ### Proposed Approaches in eCAP Segmentation
 
@@ -357,8 +357,8 @@ _Fig.15. F1 scores from the LSTM encoder-decoder on the test sets._
 
 __Baseline__: [Figure 12](#fig12) shows that the consistency of A-beta and A-gamma in their frequency and location of appearance gives them fairly decent scores when predicted blindly. A-delta and B fibres leave significant room for improvement. It is also worth noting that the interquartile range (IQR) is decently sized despite significant inter-subject variability. The non-fibre label (“other”), being the majority class, is the easiest to predict even using a data agnostic method.
 
-__BiLSTM+Attention__: [Figure 13](#fig13) shows that the model does not perform well enough. While producing gains in A-delta and B fibres for some subjects, overall many others have taken a hit. The IQR has also widened in 3 of the 5 labels with four subjects being out of the range in A-beta and B.
+__BiLSTM+Attention__: [Figure 13](#fig13) shows that the model improves over the baseline and produces gains in A-delta and B fibres for some subjects. However, the IQR has widened in some of the fibre types.
 
 __Conv-ED__: [Figure 14](#fig14) shows while the improvements over BiLSTM+Attention are modest in A-beta and A-gamma, there is a notable jump in performance in the B-fibre compared to the baseline. Three of the six subjects perform over 0.4 while two have over 0.6 in their F1-scores. In A-beta and A-gamma, the averages are still close to the baseline but the IQR has reduced slightly.
 
-__LSTM-ED__: [Figure 15](#fig15) reports that the average performance for A-beta, A-gamma, and B fibres has improved over the baseline, with a notable advance in the B-fibre. Four subjects give a score of 0.4 and above in the B-fibre while the IQR in other fibres has narrowed further. 
+__LSTM-ED__: [Figure 15](#fig15) reports that the performance of LSTM-ED is similar to BiLSTMs+Attn but second-best on average. However, four subjects give a score of 0.4 and above in the B-fibre while the IQR in other fibres has narrowed further. 
